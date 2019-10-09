@@ -1,0 +1,177 @@
+// subscribe form area after the post
+// -----------------------------------------
+.subscribe-area {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: $spacer auto;
+	padding: $spacer/2 $spacer/2 0 $spacer/2;
+	
+
+	.social-link svg {
+		fill: $black;
+		opacity: .8;
+	}
+}
+
+.social-area {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	h4 {
+		font-size: $font-size/1.1;
+		margin: 0 16px 5px 0;
+		letter-spacing: 2px;
+	}
+}
+
+@include media(700) {
+	.subscribe-area {
+	max-width: 600px;
+}
+}
+
+@include media(900) {
+	.subscribe-area {
+	max-width: 700px;
+}
+}
+
+
+//Modal that holds subscribe form
+.call-modal,
+#app-social-modal {
+	text-align: center;
+	width: 100%;
+	@include margin(0);
+	h3 {
+		font-size: 1.5rem;
+		line-height: 1.2;
+		opacity: .8;
+		margin-top: 0;
+		margin-bottom: 2px;
+		cursor: pointer;
+		opacity: .8;
+	}
+
+	span {
+		font-style: italic;
+		font-weight: $light;
+	}
+	p {
+		font-size: $font-size/1.2;
+		font-style: italic;
+		letter-spacing: 0;
+		font-family: $font;
+		margin-bottom: $spacer/2;
+	}
+}
+
+//modal
+.modal-mask {
+	@include position(fixed, 0 null null 0);
+	z-index: 9998;
+	@include size(100%);
+	background-color: rgba(0, 0, 0, .5);
+	display: table;
+	transition: opacity .3s ease;
+}
+.modal-wrapper {
+	display: table-cell;
+	vertical-align: middle;
+}
+.modal-container {
+	position: relative;
+	width: 300px;
+	margin: 0px auto;
+	padding: 15px;
+	background-color: #fff;
+	border-radius: 2px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+	transition: all .3s ease;
+	overflow: hidden;
+	z-index: 20000;
+}
+
+.modal-close {
+	@include position(absolute, null 20px 5px null);
+	cursor: pointer;
+	font-family: $font-stack-helvetica;
+	font-size: 1.4rem;
+	color: $mid-gray;
+}
+.modal-enter {
+	opacity: 0;
+}
+.modal-leave-active {
+	opacity: 0;
+}
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+@include media(600) {
+	.modal-container {
+	width: 450px;
+	border-radius: 3px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, .53);
+}
+
+.modal-body {
+	padding: 25px;
+}
+}
+
+@include media(700) {
+.call-modal,
+#app-social-modal {
+	h3 {
+		font-size: 1.8em;
+	}
+
+	p {
+		font-size: $font-size*1.1;
+	}
+}
+.modal-container {
+	width: 600px;
+	border-radius: 4px;
+}
+
+
+.modal-body {
+	padding: 30px 55px;
+}
+
+.modal-close {
+	font-size: 1.7rem;
+}
+}
+
+@include media(900) {
+	.call-modal,
+	#app-social-modal {
+	h3 {
+		font-size: 2em;
+	}
+
+	p {
+		font-size: $font-size*1.1;
+	}
+}
+.modal-container {
+	width: 800px;
+}
+.modal-body {
+	padding: 20px 100px;
+}
+#app-modal h3:hover {
+		opacity: 1;
+	}
+	.modal-close:hover {
+		color: $black;
+	}
+}

@@ -1,0 +1,69 @@
+.post-content,
+.page-content {
+
+ position: relative;
+    background: $white;
+    @include padding($spacer/2 $spacer/2 $spacer/2 $spacer/2);
+    min-height: 350px;
+
+@import "typography";
+@import "lists";
+@import "blockquotes";
+@import "media";
+@import "elements";
+// @import "cover-image";
+// @import "embed";
+// @import "gallery";
+// @import "latest";
+// @import "media-text";
+// @import "rss";
+ //@import "colors";
+// @import "tables-text-columns";
+
+a.citation,
+a.footnote {
+	box-shadow: none;
+	font-size: 70%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+	top: -0.5em;
+	outline: none;
+}
+.footnotes-sep {
+	margin-bottom: 30px;
+}
+.footnotes li,
+.footnotes li p {
+	font-size: $third;
+	
+}
+.footnotes p {
+	margin: 0;
+	line-height: 1.6;
+}
+.footnotes a {
+	box-shadow: none;
+}
+.footnote-backref {
+	color: $blue !important;
+	font-size: $third;
+	font-weight: bold;
+	outline: none;
+	a {
+		text-decoration: none !important;
+		box-shadow: none !important;
+	}
+}
+.footnote-ref {
+	color: $blue !important;
+	font-size: $third;
+	font-weight: bold;
+	a {
+		text-decoration: none !important;
+		box-shadow: none !important;
+	}
+}
+
+
+}

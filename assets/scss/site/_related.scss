@@ -1,0 +1,155 @@
+// =======================
+// Related Posts
+// =======================
+
+.related {
+    @include padding($spacer 0);
+
+   h3 {
+    font-size: $font-size*1.2;
+        margin-top: 0;
+        margin-bottom: $spacer/2;
+        text-align: center;
+        letter-spacing: 1px;
+   }
+
+
+    h4 {
+        margin-top: 0;
+        margin-bottom: $spacer/2;
+        font-family: $heading-font;
+    font-size: $font-size/1.2;
+    text-align: center;
+    letter-spacing: 2px;
+    }
+}
+
+#rig {
+    margin: 0;
+    padding:0;
+    font-size:0; /* Remember to change it back to normal font size if have captions */
+    list-style:none;
+    background-color:0;
+}
+#rig li {
+    display: inline-block;
+    *display:inline;/*for IE6 - IE7*/
+    width:50%;
+    vertical-align:middle;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+        
+/* The wrapper for each item */
+.rig-cell {
+    //margin:12px;
+    //box-shadow:0 0 6px rgba(0,0,0,0.3);
+    display:block;
+    position: relative;
+    overflow:hidden;
+}
+        
+/* If have the image layer */
+.rig-img {
+    display:block;
+    width: 100%;
+    height: 90px;
+    margin: 0;
+    border:none;
+    transform:scale(1);
+    transition:all 1s;
+}
+
+#rig li:hover .rig-img {
+    transform:scale(1.05);
+}
+        
+/* If have the overlay layer */
+.rig-overlay {
+    position: absolute;
+    display:block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: $dark-gray;
+    background-size:50px 50px;
+    opacity:0;
+    filter:alpha(opacity=0);/*For IE6 - IE8*/
+    transition:all 0.6s;
+}
+#rig li:hover .rig-overlay {
+    opacity:0.7;
+}
+
+/* If have captions */
+.rig-text {
+    display:block;
+    padding:0 20px;
+    box-sizing:border-box;
+    position:absolute;
+    left:0;
+    width:100%;
+    text-align:center;
+    text-transform:capitalize;
+    font-size:15px;
+    font-weight:bold;
+    font-family: $heading-font;
+    font-weight:normal!important;
+    line-height: 1.3;
+    top:15%;
+    color:white;
+    opacity:0;
+    filter:alpha(opacity=0);/*For older IE*/
+    transform:translateY(-20px);
+    transition:all .3s;
+}
+#rig li:hover .rig-text {
+    transform:translateY(0px);
+    opacity:0.9;
+}
+
+//Fresh sites have no related posts
+.no-related-posts {
+    font-size: $font-size;
+    text-align: center;
+    border: $border;
+    padding: $spacer/2 $spacer/4;
+    margin: $spacer 0;
+    vertical-align: center;
+    border-radius: $radius;
+    @include background($light-background);
+}
+
+@include media(700) {
+    #rig li {
+        width:33.33%;
+
+    }
+
+    .rig-text { 
+    	font-size:18px;
+    	top:20%;
+    }
+
+    .no-related-posts {
+    font-size: $lead;
+    padding: $spacer/2;
+    margin: $spacer auto;
+    width: 50%; 
+    }
+}
+
+@include media(800) {
+
+    .related {
+        max-width: 860px;
+    @include margin(null auto);
+    }
+    #rig li {
+        width:25%;
+    }
+}
+

@@ -1,0 +1,132 @@
+// Contact Form
+.contact-form {
+	.hide {
+			@include hide-visually;
+		}
+		z-index: 1300;
+	text-align: center;
+	h2 {
+		font-size: 1.7rem;
+		margin: 0;
+		color: $black;
+	}
+	p {
+		font-size: .8rem;
+		margin-bottom: 0;
+		margin-top: 12px;
+		line-height: 1.4;
+		color: $black;
+	}
+}
+.contact-form .form-wrap {
+	margin-bottom: $spacer/2;
+}
+.swal-button {
+	padding: 0 10px;
+}
+
+//Comment form
+.subscribe {
+	display: block;
+	padding: 12px;
+	margin-top: $spacer/2;
+	width: 100%;
+	//border: tint($light-gray, 7%) 1px solid;
+	font-size: .8rem;
+	line-height: 1.2;
+	user-select: text;
+	//transition: border-color 0.15s linear;
+	-webkit-appearance: none;
+}
+.subscribe:focus {
+	//outline: 0;
+	//border-color: shade($light-gray, 30%);
+}
+
+//Includes comment form submit button and contact form button
+button,
+.submit {
+	@include margin(null auto);
+	max-width: 300px;
+	 padding: 0 15px;
+	 height: 34px;
+	font-size: $third;
+	color: $white;
+	text-transform: uppercase;
+	 letter-spacing: 1px;
+	line-height: 37px;
+	font-weight: $normal;
+	opacity: .9;
+	
+	// background: linear-gradient(tint($blue, 7%), shade($blue, 7%), tint($blue, 10%));
+	//box-shadow: 0 0 0 1px inset rgba(0, 0, 0, 0.14);
+	//-webkit-font-smoothing: subpixel-antialiased;
+	&:active,
+	&:focus {
+		//background: linear-gradient(tint($blue, 10%), shade($blue, 10%)), ;
+	}
+}
+
+
+@include media(700) {
+	.contact-form {
+		.hide {
+			@include hide-visually("unhide");
+		}
+		h2 {
+			margin: 0;
+			font-size: 1.9rem;
+		}
+		p {
+			font-size: 1rem;
+			margin-bottom:5px;
+			margin-top: 10px;
+			padding: 0 $spacer*1.5 !important;
+		}
+}
+
+.subscribe {
+	padding: 15px;
+	margin-top: $spacer;
+	font-size: 1rem;
+}
+
+button,
+.submit {
+	max-width: 400px;
+	 padding: 0 15px;
+	 height: 38px;
+	 font-size: $secondary;
+
+}
+}
+
+
+@include media(900) {
+	.contact-form {
+	
+		h2 {
+			font-size: 2.1rem;
+		}
+		p {
+			margin-bottom:10px;
+			margin-top: 20px;
+			padding: 0 !important;
+		}
+}
+
+.subscribe {
+	margin-top: $spacer*1.2;
+}
+
+button,
+.submit {
+	max-width: 500px;
+	 padding: 0 20px;
+	 height: 40px;
+// 	 &:hover {
+// background: linear-gradient(tint($blue, 10%), shade($blue, 10%)), ;
+// 	 }
+
+}
+}

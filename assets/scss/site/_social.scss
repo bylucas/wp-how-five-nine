@@ -1,0 +1,64 @@
+// Social Icons
+.social-wrap {
+    width: 300px;
+    border-top: 1px solid $mid-gray;
+    border-bottom: 1px solid $mid-gray;
+    @include margin($spacer/2 auto null auto);
+    padding-top: $spacer/3;
+    padding-bottom: $spacer/3;
+    a {
+        text-decoration: none;
+    }
+}
+.social-links {
+    @include margin(null auto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-links a:last-of-type {
+    padding-right: 20px;
+}
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10px 2px;
+    color: #fff;
+    opacity: 0.8;
+}
+.social-link svg {
+    height: 2.8rem;
+    width: 2.8rem;
+    fill: $white-gray;
+}
+.social-link-fb svg {
+    height: 1.7rem;
+}
+
+.social-subscribe {
+    cursor: pointer;
+    font-size: $font-size*1.1;
+    letter-spacing: 2px;
+    font-style: italic;
+    opacity: .8;
+    padding-right: 15px;
+}
+
+@include media(600) {
+    .social-wrap {
+        width: 450px;
+    }
+    .social-link {
+        padding: 10px 3px;
+    }
+}
+
+@include media(900) {
+    .social-link:hover,
+    .social-wrap a:hover,
+    .social-subscribe:hover {
+        opacity: 1;
+    }
+}

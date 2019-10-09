@@ -1,0 +1,97 @@
+//Typography
+
+
+p {
+	font-size: $font-size*1.1;
+  color: $post-text-color;
+}
+
+h2 {
+	font-size: $font-size*1.6;
+}
+
+h3 {
+	font-size: $font-size*1.5;
+}
+
+h4 {
+	font-size: $font-size*1.4;
+}
+
+h5 {
+	font-size: $font-size*1.3;
+}
+
+h6 {
+	font-size: $font-size;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+// .is-small-text {
+//   font-size: 14px; }
+
+// .is-regular-text {
+//   font-size: 16px; }
+
+// .is-large-text {
+//   font-size: 36px; }
+
+// .is-larger-text {
+//   font-size: 48px; }
+
+// .has-drop-cap:not(:focus)::first-letter {
+//   float: left;
+//   font-size: 8.4em;
+//   line-height: 0.68;
+//   font-weight: 100;
+//   margin: 0.05em 0.1em 0 0;
+//   text-transform: uppercase;
+//   font-style: normal; }
+
+// .has-drop-cap:not(:focus)::after {
+//   content: "";
+//   display: table;
+//   clear: both;
+//   padding-top: 14px; }
+
+// p.has-background {
+//   padding: 20px 30px; }
+
+// p.has-text-color a {
+//   color: inherit; }
+
+  /////////////////
+
+  // p.wp-block-subhead {
+  // font-size: 1.1em;
+  // font-style: italic;
+  // opacity: 0.75; }
+
+
+// pre.wp-block-verse {
+//   white-space: nowrap;
+//   overflow: auto; }
+
+//     .wp-block-code {
+//   margin-bottom: $spacer;
+// }
+
+// .wp-block-code {
+//   font-family: Menlo, Consolas, monaco, monospace;
+//   font-size: 14px;
+//   color: #23282d;
+//   padding: 0.8em 1em;
+//   border: 1px solid #e2e4e7;
+//   border-radius: 4px; }
+
+// .wp-block-preformatted pre {
+//   font-family: $code-font;
+//   color: #23282d;
+//   //Fonts smaller than 16px causes mobile safari to zoom.
+//   font-size: 16px; }
+  
+  // @include media(600) {
+  //   .wp-block-preformatted pre {
+  //     font-size: 14px; } }
+

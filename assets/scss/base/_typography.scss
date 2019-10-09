@@ -1,0 +1,130 @@
+// =======================
+// Typography
+// =======================
+
+hr {
+  margin: 4vw $spacer;
+  border-width: 0;
+  height: 1px;
+  background: $off-white;
+  box-shadow: #fff 0 0 0 5px;
+  position: relative;
+  clear: both;
+  
+  &:after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  display: block;
+  margin-left: -10px;
+  width: 1px;
+  height: 30px;
+  background: tint($light-gray, 10%);
+  box-shadow: #fff 0 0 0 5px;
+  transform: rotate(45deg);
+}
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font;
+  color: $font-color;
+  clear: both; // remember this!
+  line-height: 1.4;
+  margin-bottom: .5rem;
+  margin-top: $spacer/2;
+  hyphens: none;
+  font-size: $font-size;
+  font-weight: $heavy;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: $spacer;
+  line-height: $line-height;
+  hyphens: none;
+}
+
+small {
+  font-size: $font-size / 1.25;
+}
+
+pre {
+  overflow: auto;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: -moz-pre-wrap; // fennec
+  white-space: pre-wrap;
+  white-space: pre\9; // IE7+
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+dl {
+  margin: 0;
+}
+
+dt {
+  font-weight: $heavy;
+  margin: 0;
+}
+
+dd {
+  margin: 0;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: $code-font;
+  font-size: $secondary;
+  line-height: $line-height;
+  margin-bottom: $spacer/2;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+// consistant paragraphs
+.lead {
+  font-size: $lead;
+}
+
+.secondary {
+  font-size: $secondary;
+}
+
+.third {
+  font-size: $third;
+}
+
+@include media(800) {
+  hr {
+  max-width: 860px;
+    @include margin(null auto);
+  }
+}

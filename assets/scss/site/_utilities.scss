@@ -1,0 +1,121 @@
+// =======================
+// Utilities
+// =======================
+#loader-wrapper {
+  @include position(fixed, 0 null null 0);
+  @include size(100%);
+  z-index: 1600;
+}
+#app-loader {
+  display: block;
+  @include position(relative, 40% null null 40%);
+  z-index: 1600;
+}
+@include media(900) {
+  #app-loader {
+  @include position(relative, 40% null null 48%);
+}
+}
+
+#loader-wrapper .loader-section {
+  @include position(fixed, 0 null null null);
+  @include size(51%, 100%);
+  background: #0A0A0A;
+  z-index: 1550;
+  transform: translateX(0);
+}
+#loader-wrapper .loader-section.section-left {
+  left: 0;
+}
+#loader-wrapper .loader-section.section-right {
+  right: 0;
+}
+// Loaded
+.loaded #loader-wrapper .loader-section.section-left {
+  transform: translateX(-100%);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+.loaded #loader-wrapper .loader-section.section-right {
+  transform: translateX(100%);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+.loaded #app-loader {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+.loaded #loader-wrapper {
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: all 0.3s 1s ease-out;
+}
+// JavaScript Turned Off
+.no-js #loader-wrapper {
+  display: none;
+}
+//spinner template
+.sl-spinner {
+  border-style: solid;
+  transform: translateZ(0);
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+@keyframes forward {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes backward {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(-360deg);
+  }
+}
+//Search loader on search overlay
+#search-loader-wrap {
+  margin: $spacer auto 0 auto;
+  font-weight: 300;
+  letter-spacing: 1px;
+  z-index: 1700;
+  @include size(60px);
+  color: $white;
+}
+/////////////////////////////////////
+// BACK TO TO CURRENTLY IN THE HEADER
+.goTop {
+  border-radius: 5px;
+  background-color: $black;
+  color: #FEFAFF;
+  position: fixed;
+  text-align: center;
+  padding: 5px 12px;
+  display: block;
+  right: 15px;
+  bottom: 15px;
+  border: none;
+  opacity: 0;
+  z-index: -1;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+    background-color: rgb(1, 14, 27);
+    background-color: rgba(1, 14, 27, .9);
+  }
+}
+.isVisible {
+  opacity: .8;
+  z-index: 1000;
+  transition: all .4s ease-in;
+}

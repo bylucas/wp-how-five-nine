@@ -1,0 +1,168 @@
+//Phone1st
+//A super light developer theme
+//
+//
+// ===================================
+//   Import the basics
+//  ==================================
+@import "reset";
+@import "bourbon";
+
+@import "base/variables";
+@import "base/mixins";
+//@import "base/fonts";
+
+
+// ===================================
+//   Base styles
+//  ==================================
+//  
+@import "base/typography";
+@import "base/media";
+@import "base/form";
+@import "base/table";
+
+html {
+		overflow-x: hidden;
+	overflow-y: scroll;
+		-webkit-tap-highlight-color: $light-gray;
+		box-sizing: border-box;
+		height: 100%;
+}
+
+*,
+*::before,
+*::after {
+		box-sizing: inherit;
+}
+
+body {
+	height: 100%;
+	color: $font-color;
+	font-family: $font;
+	font-feature-settings: "kern", "liga", "pnum";
+	font-size: $font-size;
+	line-height: $line-height;
+	background: #f4f8fb;
+	text-rendering: optimizeLegibility;
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+	
+	&:active,
+	&:focus,
+	&:hover {
+		color: $link-color;
+}
+}
+
+//Links hovers
+@include media(900) {
+a {
+  transition: color 0.3s ease-in 0.1s;
+    
+  &:hover {
+    color: $hover-color;
+}
+}
+}
+
+// ==========================
+//  Author's custom styles
+// ==========================
+
+@import "site/site";
+@import "site/utilities";
+@import "site/active-header";
+@import "site/toggles";
+@import "site/full-screen-overlay";
+@import "site/post-floating-header";
+
+@import "site/menu";
+@import "site/search-header";
+@import "site/social";
+
+@import "site/related";
+@import "site/comments";
+@import "site/site-footer";
+
+@import "site/modal";
+@import "site/contact";
+@import "site/prism-code";
+
+@import "pages/single";
+@import "pages/index";
+@import "pages/none";
+@import "pages/page";
+@import "pages/author";
+
+
+// ==============================================
+// Print styles.
+// ==============================================
+@media print {
+*,
+*:before,
+*:after,
+*:first-letter,
+*:first-line {
+	background: transparent !important;
+	color: #000 !important; // Black prints faster:
+	//http://www.sanbeiji.com/archives/953
+	box-shadow: none !important;
+	text-shadow: none !important;
+}
+
+a,
+a:visited {
+	text-decoration: underline;
+}
+
+a[href]:after {
+	content: " (" attr(href) ")";
+}
+
+abbr[title]:after {
+	content: " (" attr(title) ")";
+}
+// Don't show links that are fragment identifiers,
+// or use the `javascript:` pseudo protocol
+a[href^="#"]:after,
+a[href^="javascript:"]:after {
+	content: "";
+}
+
+pre,
+blockquote {
+	border: 1px solid #999;
+	page-break-inside: avoid;
+}
+// Printing Tables:
+// http://css-discuss.incutio.com/wiki/Printing_Tables
+thead {
+	display: table-header-group;
+}
+
+tr,
+img {
+	page-break-inside: avoid;
+}
+
+img {
+	max-width: 100% !important;
+}
+
+p,
+h2,
+h3 {
+	orphans: 3;
+	widows: 3;
+}
+
+h2,
+h3 {
+	page-break-after: avoid;
+}
+}

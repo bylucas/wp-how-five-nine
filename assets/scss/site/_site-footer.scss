@@ -1,0 +1,57 @@
+// Site Footer
+.site-footer {
+	position: relative;
+	padding: 20px 10px 60px 20px;
+	color: #fff;
+	background: $black;
+}
+.site-footer-content {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	color: rgba(255, 255, 255, 0.7);
+	font-size: .9rem;
+}
+.site-footer-content a {
+	color: rgba(255, 255, 255, 0.7);
+}
+.menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	li {
+		display: inline;
+		font-size: .9rem;
+		&:last-child {
+			color: $black;
+		}
+	}
+}
+.spacer {
+	padding-left: 5px;
+}
+.site-footer-nav {
+	display: flex;
+	margin-top: 6px;
+}
+.site-footer-nav a {
+	position: relative;
+	margin-left: 0;
+	opacity: .7;
+}
+@include media(600) {
+	.site-footer-content {
+		flex-direction: row;
+	}
+	.site-footer-nav a:first-child {
+		margin-left: 0;
+	}
+}
+
+@include media(900) {
+	.site-footer-nav a:hover {
+	opacity: 1;
+}
+}

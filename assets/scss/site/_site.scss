@@ -1,0 +1,60 @@
+// =======================
+// Site
+// =======================
+
+.site,
+header,
+main,
+.post,
+.post-content,
+.wp-block,
+.post-meta,
+.related,
+.post-full-comments,
+footer {
+	@include clearfix;
+}
+
+.site {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-main {
+    z-index: 100;
+    flex-grow: 1;
+}
+
+//helpers
+.screen-reader-text,
+.hidden {
+	@include hide-visually;
+}
+
+// Full width page blocks
+.outer {
+	position: relative;
+	padding: 0;
+}
+// Centered content container blocks
+.inner {
+	margin: 0 auto;
+	max-width: 920px;
+	width: 100%;
+}
+
+//Common
+.site-header-content,
+.page-header-content,
+.site-header-content-admin,
+.post-header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    max-height: 450px;
+    text-align: center;
+
+}

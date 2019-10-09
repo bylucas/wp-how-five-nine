@@ -1,0 +1,126 @@
+// 6. Post Feed
+.post-feed {
+	position: relative;
+	margin: 0;
+padding: 40px 0 0 0;
+}
+.post-card {
+	overflow: hidden;
+	margin-bottom: $spacer;
+	padding: 0;
+	min-height: 200px;
+	background: #fff center center;
+	background-size: cover;
+	border-radius:$radius;
+	box-shadow: rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
+	transition: all 0.5s ease;
+}
+.post-card-image-link {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	border-radius: $radius $radius 0 0;
+}
+.post-card-image {
+	width: auto;
+	height: 200px;
+	background: $light-gray no-repeat center center;
+	background-size: cover;
+}
+
+.post-card-content {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: $spacer/2 $spacer/2 0 $spacer/2;
+	text-align: center;
+
+
+	h2 {
+		font-size: $font-size*1.5;
+		letter-spacing: 0.5px;
+		margin: 0 0 $spacer/4 0;
+		line-height: 1.1;
+	}
+
+	p {
+	font-size: $font-size*1.1;
+	font-weight: $light;
+	font-style: italic;
+	margin: 0 0 $spacer/2 0;
+	text-align: left;
+	}
+}
+
+.post-card-meta {
+border-top: $border;
+padding: 5px 0;
+	p {
+	font-size: $third;
+	margin: 0 0 5px 0;
+	text-align: left;
+	color: $postcard-meta;
+}
+	a {
+	font-size: $third;
+	//color: $blue;
+	margin-right: 3px;
+	}
+
+	.comments-link {
+		float: right;
+	}
+}
+
+.post-card-meta .reading-time {
+	text-align: center;
+	font-size: $third/1.1;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
+.reading-number {
+	font-weight: $heavy;
+}
+
+.page.post-card {
+	padding: 0;
+}
+
+@include media(700) {
+	.post-feed {
+		display: flex;
+    flex-wrap: wrap;
+    padding: 40px $spacer/2 0 $spacer/2;
+	}
+
+	.post-card {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px 30px;
+}
+}
+
+@include media(900) {
+	.home-template .post-feed,
+	.tag-template .post-feed,
+	.author-template .post-feed {
+		margin-top: -70px;
+		padding-top: 0;
+	}
+	.post-feed {
+		margin: 0 -20px;
+
+}
+.post-card {
+    margin: 0 20px 40px;
+}
+.post-card:hover {
+		text-decoration: none;
+		box-shadow: rgba(39, 44, 49, 0.07) 8px 28px 50px, rgba(39, 44, 49, 0.04) 1px 6px 12px;
+		transition: all 0.7s ease;
+		transform: translate3D(0, -1px, 0) scale(1.02);
+	}
+}
+

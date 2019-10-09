@@ -1,0 +1,166 @@
+// =======================
+// Menu
+// =======================
+.menu-wrap {
+	padding: $spacer*2 $spacer/8;
+	
+	p {
+		text-align: center;
+		font-size: 1.1rem;
+		line-height: 1.2;
+		font-family: $heading-font;
+		letter-spacing: 2px;
+		margin-top: $spacer/1.5;
+	}
+}
+.nav-menu {
+	margin: $spacer $spacer/2;
+	
+	width: 260px;
+	ul {
+		list-style: none;
+		a {
+			color: $off-white;
+		}
+		li {
+			position: relative;
+			text-transform: uppercase;
+			padding-bottom: 20px;
+			font-size: 1rem;
+			padding-top: 2px;
+			ul {
+				padding: 0;
+				
+				margin: 0;
+				li {
+					text-transform: none;
+					padding: 6px 0;
+					font-size: $secondary;
+				}
+			}
+		}
+	}
+}
+.nav-menu ul .toggled-on {
+	display: block;
+}
+.nav-menu ul ul {
+	display: none;
+}
+// High-light current page
+.nav-menu .current-menu-item > a,
+.nav-menu .current-menu-ancestor > a,
+.nav-menu .current_page_item > a,
+.nav-menu .current_page_ancestor > a {
+	color: $light-gray !important;
+	font-weight: bold;
+	cursor: default;
+}
+.claret {
+	width: 20px;
+	height: 20px;
+	@include position(absolute, 4px 0 null null);
+}
+.claret .line {
+	width: 11px;
+	height: 2px;
+	background-color: white;
+	display: block;
+	margin: 6px auto;
+	transition: all 0.3s ease-in-out;
+}
+.claret:hover {
+	cursor: pointer;
+}
+#claret .line:nth-child(1) {
+	transform: translateY(3px) rotate(90deg);
+}
+#claret .line:nth-child(2) {
+	transform: translateY(-5px);
+}
+//toggle-on
+#claret.toggle-on .line:nth-child(1) {
+	transform: translateY(3px);
+}
+#claret.toggle-on .line:nth-child(2) {
+	transform: translateY(-5px) rotate(90deg);
+	opacity: 0;
+}
+
+@include media(500) {
+	.nav-menu {
+	margin: $spacer auto;
+	
+	width: 300px;
+}
+}
+
+
+@include media(600) {
+	.menu-wrap {
+		padding: $spacer*2;
+
+		p {
+		font-size: 1.4rem;	
+		}
+	}
+	.nav-menu {
+		width: 450px;
+	}
+	.nav-menu ul li ul {
+		padding: 0 0 0 10px;
+	}
+}
+
+@include media(900) {
+	.nav-menu ul a:hover {
+		color: $blue;
+	}
+}
+/////////////////////////////////////////////////////
+//icons on menu
+.nav-menu ul li.pic-1,
+.nav-menu ul li.pic-2,
+.nav-menu ul li.pic-3,
+.nav-menu ul li.pic-4,
+.nav-menu ul li.pic-5,
+.nav-menu ul li.pic-6,
+.nav-menu ul li.pic-7,
+.nav-menu ul li.pic-8,
+.nav-menu ul li.pic-9,
+.nav-menu ul li.pic-10 {
+	padding-left: 41px;
+	background-repeat: no-repeat;
+	background-size: 30px 30px;
+	background-position: 0 0x;
+}
+.pic-1 {
+	background-image: url(../images/icon-one.png);
+}
+.pic-2 {
+	background-image: url(../images/icon-two.png);
+}
+.pic-3 {
+	background-image: url(../images/icon-three.png);
+}
+.pic-4 {
+	background-image: url(../images/icon-four.png);
+}
+.pic-5 {
+	background-image: url(../images/icon-five.png);
+}
+.pic-6 {
+	background-image: url(../images/icon-six.png);
+}
+.pic-7 {
+	background-image: url(../images/icon-seven.png);
+}
+.pic-8 {
+	background-image: url(../images/icon-eight.png);
+}
+.pic-9 {
+	background-image: url(../images/icon-nine.png);
+}
+.pic-10 {
+	background-image: url(../images/icon-ten.png);
+}

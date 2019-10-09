@@ -1,0 +1,64 @@
+.site-nav-right {
+    //flex-shrink: 0;
+    //display: flex;
+    //align-items: center;
+    padding-right: 4vw;
+
+     .toggles {
+      margin-top: 5px;
+
+    
+    li {
+      display: inline-block;
+      vertical-align:bottom;
+  
+}
+.search-icon {
+  margin-right: 7px;
+  margin-bottom: 8px;
+}
+}
+
+   svg {
+
+      .cls-1,.cls-3{
+        fill:none;
+      }
+      .cls-3{
+        transition: all .3s ease-in-out;
+        stroke:$white;
+        stroke-miterlimit:10;
+        stroke-width:2px;
+      }
+    }
+}
+
+.site-nav-right {
+     
+        .offcanvas-toggle{
+          .toggle-line{
+            background: $white;
+          }
+        }
+        .search-toggle {
+          svg .cls-3{
+            stroke: $white;
+          }
+        }
+        
+        &.dark{
+
+          .offcanvas-toggle{
+            .toggle-line{
+              //background: $off-white;
+            }
+          }
+          
+          .search-toggle {
+            svg .cls-3{
+              stroke: $off-white;
+            }
+          }
+        }
+      
+    }
