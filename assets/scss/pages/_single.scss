@@ -18,6 +18,7 @@
 
 h1 {
 	font-size: $font-size*1.8;
+    font-family: $font-black;
     color: $white-gray;
     line-height: 1.2;
 	margin-top: 0;
@@ -83,10 +84,10 @@ img {
 }
 
 .bigger {
-    font-weight: $heavy;
+    font-family: $bold;
     }
  .author-job {
-        font-weight: $normal;
+        font-family: $medium;
     }
 
 .post-meta-wrap {

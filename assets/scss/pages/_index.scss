@@ -46,7 +46,7 @@ padding: 40px 0 0 0;
 
 	p {
 	font-size: $font-size*1.1;
-	font-weight: $light;
+	font-family: $light-font;
 	font-style: italic;
 	margin: 0 0 $spacer/2 0;
 	text-align: left;
@@ -80,7 +80,7 @@ padding: 5px 0;
 	text-transform: uppercase;
 }
 .reading-number {
-	font-weight: $heavy;
+	font-family: $font-black;
 }
 
 .page.post-card {

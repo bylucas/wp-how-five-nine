@@ -14,14 +14,14 @@ fieldset {
 }
 
 legend {
-  font-weight: $heavy;
+  font-family: $semi-bold;
   margin-bottom: $spacer / 4;
   padding: 0;
 }
 
 label {
   display: block;
-  font-weight: $heavy;
+  font-family: $semi-bold;
   margin-bottom: $spacer / 4;
 }
 
@@ -31,6 +31,7 @@ textarea {
   outline: 0 none;
   display: inline-block;
   font-family: $font;
+  color: $mid-gray;
   font-size: $secondary;
 }
 // Add your type inputs
@@ -115,7 +116,7 @@ select {
   border: none;
   cursor: pointer;
   display: inline-block;
-  //font-family: $font;
+  font-family: $semi-bold;
   // font-size: $third;
   // font-weight: $heavy;
   -webkit-font-smoothing: antialiased;

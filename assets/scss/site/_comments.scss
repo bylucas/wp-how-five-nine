@@ -48,7 +48,6 @@
 					box-shadow: 2px 2px 2px #cbcbcb;
 				}
 				.fn {
-					font-style: normal;
 					font-size: 1.3rem;
 					line-height: 1.2;
 				}
@@ -184,7 +183,7 @@
 			@include size(20px);
 		}
 		label {
-			font-weight: $normal;
+			//font-weight: $normal;
 		}
 
 	}

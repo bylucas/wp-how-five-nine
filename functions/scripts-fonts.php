@@ -10,7 +10,7 @@ SCRIPTS and FONTS - Load and manage scripts and fonts
  */
 //Google Fonts
 function add_google_fonts() {
- wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i&display=swap|Source+Code+Pro', false );
+ wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Source+Code+Pro', false );
  }
  add_action( 'wp_enqueue_scripts', 'add_google_fonts' );
 

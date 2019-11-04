@@ -45,6 +45,7 @@
 
 
 .site-title {
+    font-family: $font-black;
     z-index: 10;
     margin: 0;
     padding: 0;
@@ -53,6 +54,7 @@
 }
 
 .site-description {
+    font-family: $semi-bold;
     z-index: 10;
     color: $white;
     margin: 0;
@@ -74,11 +76,13 @@
 .page-header-content {
     padding-top: $spacer*2;
     h1 {
+        font-family: $font-black;
     font-size: 2.1rem;
     color: $white;
     margin: 0;
     }
     p {
+        font-family: $semi-bold;
      line-height: 1.4;
     font-size: 1rem;
     letter-spacing: 0.5px;   
@@ -100,6 +104,7 @@
 
 //search page
 .page-header-content span {
+    font-family: $medium;
     font-size: $font-size;
     letter-spacing: 3px;
     color: $light-gray;

@@ -85,7 +85,7 @@
 //Search loader on search overlay
 #search-loader-wrap {
   margin: $spacer auto 0 auto;
-  font-weight: 300;
+  font-family: $light-font;
   letter-spacing: 1px;
   z-index: 1700;
   @include size(60px);
