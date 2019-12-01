@@ -176,7 +176,7 @@ function phone1st_call_title() {
 	the_title();
 
 		} else {
-			echo __( 'how59', 'phone1st' );
+			echo __( get_option('blogname'), 'phone1st' );
 
 	}
 }

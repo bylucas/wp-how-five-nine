@@ -16,8 +16,8 @@
             <div class="inner">
  
                 <section class="error-message">
-                    <h1><?php _e( 'Oops!', 'casper' ); ?></h1>
-                    <p><?php _e( 'It seems the page you are looking for has gone astray.', 'casper' ); ?></p>
+                    <h1><?php _e( 'Oops!', 'phone1st' ); ?></h1>
+                    <p><?php _e( 'It seems the page you are looking for has gone astray.', 'phone1st' ); ?></p>
                    
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Go to the front page →</a>
                 </section>

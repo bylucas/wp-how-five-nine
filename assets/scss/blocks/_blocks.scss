@@ -48,7 +48,7 @@ a.footnote {
 .footnote-backref {
 	color: $blue !important;
 	font-size: $third;
-	font-family: $semi-bold;
+	font-weight: 700;
 	outline: none;
 	a {
 		text-decoration: none !important;
@@ -58,7 +58,7 @@ a.footnote {
 .footnote-ref {
 	color: $blue !important;
 	font-size: $third;
-	font-family: $semi-bold;
+	font-weight: 700;
 	a {
 		text-decoration: none !important;
 		box-shadow: none !important;

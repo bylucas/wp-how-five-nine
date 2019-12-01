@@ -97,7 +97,7 @@
 .modal-close {
 	@include position(absolute, null 20px 5px null);
 	cursor: pointer;
-	font-family: $extra-bold;
+	font-weight: 700;
 	font-size: 1.4rem;
 	color: $mid-gray;
 }

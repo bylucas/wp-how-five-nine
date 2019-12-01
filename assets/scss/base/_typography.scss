@@ -69,8 +69,9 @@ dl {
 }
 
 dt {
-  font-family: $semi-bold;
+  font-family: $heading-font;
   margin: 0;
+  font-weight: 700;
 }
 
 dd {
@@ -90,6 +91,11 @@ samp {
   font-size: $secondary;
   line-height: $line-height;
   margin-bottom: $spacer/2;
+}
+
+code {
+  padding: 2px;
+  background: $white-gray;
 }
 
 sub,

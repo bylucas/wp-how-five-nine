@@ -14,14 +14,14 @@ fieldset {
 }
 
 legend {
-  font-family: $semi-bold;
+  font-family: $heading-font;
   margin-bottom: $spacer / 4;
   padding: 0;
 }
 
 label {
   display: block;
-  font-family: $semi-bold;
+  font-family: $heading-font;
   margin-bottom: $spacer / 4;
 }
 
@@ -116,7 +116,7 @@ select {
   border: none;
   cursor: pointer;
   display: inline-block;
-  font-family: $semi-bold;
+  font-family: $heading-font;
   // font-size: $third;
   // font-weight: $heavy;
   -webkit-font-smoothing: antialiased;
