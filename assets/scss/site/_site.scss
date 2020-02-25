@@ -22,8 +22,8 @@ footer {
 }
 
 .site-main {
-    z-index: 100;
-    flex-grow: 1;
+    // z-index: 100;
+    // flex-grow: 1;
 }
 
 //helpers
@@ -47,14 +47,17 @@ footer {
 //Common
 .site-header-content,
 .page-header-content,
-.site-header-content-admin,
-.post-header-content {
+.post-header-content,
+.cat-header-content,
+.archive-header-content,
+.admin-header-content,
+.search-header-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 200px;
-    max-height: 450px;
+    // min-height: 200px;
+    // max-height: 350px;
     text-align: center;
 
 }

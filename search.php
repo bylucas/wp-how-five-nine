@@ -22,9 +22,9 @@
 				<!-- active-header -->
 				<?php get_template_part('templates/fullscreen-overlay'); ?>
 					<div class="inner">
-						<div class="page-header-content">
+						<div class="search-header-content cover">
 
-							<h1><span><?php printf( __( 'Your Search Results for: %s', 'casper' ), '</span><br>' . esc_html( get_search_query() ) ); ?></h1>
+							<h1><span><?php printf( __( 'Your Search Results for: %s', 'phone1st' ), '</span><br>' . esc_html( get_search_query() ) ); ?></h1>
 
 						</div>
 

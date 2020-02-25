@@ -1,68 +1,23 @@
-//Index-Page-Category
 
-// Index Header - the index page
 
-.site-header {
-    position: relative;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    color: #fff;
-    background: shade($dark-gray, 5%) no-repeat center center;
-    background-size: cover;
-}
-
-.site-header:before {
-    content: "";
-    @include position(absolute, 0 0 0 0);
-    position: absolute;
-    z-index: 10;
-    display: block;
-    background: rgba(0,0,0,0.18);
-}
-
-.site-header:after {
-    content: "";
-   @include position(absolute, 0 0 auto 0);
-    z-index: 10;
-    display: block;
-    height: 80px;
-    background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0));
-    
-}
-// see category Page
 // also admin page header
-.site-header-content,
-.page-header-content,
 .site-header-content-admin {
     padding: 15vw 8vw 4vw 8vw;
-
 }
 
-.site-header-content svg {
-    @include size(60px);
-        fill: $white;
+// see category Page
+//.site-header-content,
+.page-header-content {
+   
 }
 
+// .site-header-content svg {
+//     @include size(60px);
+//         fill: $white;
+// }
 
-.site-title {
-    //font-family: $heading-font;
-    z-index: 10;
-    margin: 0;
-    padding: 0;
-    font-size: 2.1rem;
-    color: $white;
-}
 
-.site-description {
-    //font-family: $font;
-    z-index: 10;
-    color: $white;
-    margin: 0;
-    line-height: 1.2;
-    font-size: 1.2rem;
-    letter-spacing: 0.5px;
-    opacity: 0.8;
-}
+
 
 // Page
 
@@ -111,9 +66,7 @@
 }
 
 @include media(600) {
-    .site-title {
-    font-size: 2.6rem;
-}
+    
 .page-content {
     @include padding( $spacer);
 }
@@ -128,9 +81,8 @@
 }
 
 @include media(700) {
-    .site-title {
-    font-size: 2.8rem;
-}
+    
+
 .page-content {
     @include padding( $spacer*1.5);
 }
@@ -150,8 +102,6 @@
 
 @include media(900) {
 
-    .site-header-content,
-     .page-header-content,
 .site-header-content-admin {
     padding: 8vw 6vw 10vw 6vw;
     min-height: 200px;
@@ -159,9 +109,16 @@
     text-align: center;
 
 }
-    .site-title {
-    font-size: 3rem;
+
+
+    .page-header-content {
+    padding: 6vw 6vw 10vw 6vw;
+    min-height: 200px;
+    max-height: 500px;
+    text-align: center;
+
 }
+    
     .page {
     //padding: $spacer*1.5 0;
 }
@@ -184,119 +141,4 @@
 .site-header-content p {
 	color: $white;
 }
-
-//==========================================================================
-//  Sitemap
-// ==========================================================================
-
-.sitemap-header {
-    padding: 10vw 3vw 5vw 3vw;
-    min-width: 280px;
-    z-index: 1000;
-
-
-h1 {
-    font-size: $font-size*2.5;
-    color: $white;
-    line-height: 1.2;
-    margin-top: 0;
-    margin-bottom: $spacer/1.5;
-}
-}
-
-.sitemap-body {
-     //padding-top: $spacer;
-    
-    p {
-    line-height: 1.4;
-    margin-bottom: $spacer;
-}
-}
-
-.sitemap-col {
-     //margin: 0 20px 5vw;
-    overflow: hidden;
-    text-align: center;
-    background: #fff center center;
-    
-    h3 {
-        font-size: 1.2rem;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        margin: $spacer/1.5 0 10px 0;
-    }
-    ul {
-        list-style-type: none;
-        
-        li {
-            color: $black;
-            //font-family: $alt-font;
-            font-size: .9rem;
-            margin-bottom: 5px;
-
-            a {
-                color: $blue;
-                opacity: .7;
-            }
-           }
-        }
-    }
-
-    @include media(600) {
-       
-    .sitemap-header {
-     padding: 11vw 3vw 4vw 3vw;
-     h1 {
-    font-size: $font-size*3;
-    }
-}
-}
-
-
-    @include media(700) {
-
-         .sitemap-header {
-     h1 {
-    font-size: $font-size*4;
-    }
-}
-
-        .sitemap-body {
-     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -20px;
-    //padding: 40px 0 0 0;
-}
-
-.sitemap-col {
-     flex: 1 1 200px;
-    display: flex;
-    flex-direction: column;
-    margin: 0 20px 40px;
-    @include padding(null 10px);
-    min-height: 300px;
-    }
-
-    }
-
-    @include media(900) {
-
-         .sitemap-header {
-padding: 12vw 3vw 2vw 3vw;
-     h1 {
-    font-size: $font-size*5;
-    }
-}
-    .sitemap-col {
-        @include padding(10px 20px 20px 20px);
-    border-radius: 5px;
-    box-shadow: rgba(39,44,49,0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
-    transition: all 0.5s ease;
-
-    ul li a:hover {
-        opacity: 1;
-    }
-}
-    }
 

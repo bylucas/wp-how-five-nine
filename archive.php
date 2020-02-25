@@ -13,7 +13,7 @@
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="site-header outer" style="background-image: url(<?php echo get_header_image(); ?>)">
+			<header class="archive-header outer" style="background-image: url(<?php echo get_header_image(); ?>)">
 
 
 				<div id="masthead" class="active-header">
@@ -26,7 +26,7 @@
 				<!-- active-header -->
 				<?php get_template_part('templates/fullscreen-overlay'); ?>
 					<div class="inner">
-						<div class="page-header-content">
+						<div class="archive-header-content cover">
 
 							<?php
 		the_archive_title( '<h1>', '</h1>' );

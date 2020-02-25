@@ -4,7 +4,6 @@
 require get_template_directory() .'/functions/theme-support.php';
 require get_template_directory() .'/functions/cleanup.php';
 require get_template_directory() .'/functions/scripts-fonts.php';
-require get_template_directory() .'/functions/seo.php';
 require get_template_directory() .'/functions/search-action.php';
 require get_template_directory() .'/functions/meta-tags.php';
 require get_template_directory() .'/functions/infinite-scroll.php';

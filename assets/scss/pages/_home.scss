@@ -1,0 +1,161 @@
+//Home Page
+
+.home-header {
+    position: relative;
+    padding: 0;
+    color: #fff;
+    background: shade($dark-gray, 5%) no-repeat center center;
+    background-size: cover;
+    //height: 70vw;
+    height: 50vw;
+
+    p {
+      font-size: .8rem;
+      line-height: 1.4;  
+    }
+}
+
+.home-header-content {
+  margin: 60px 20px 0 20px;
+}
+
+.home-title {
+    text-align: center;
+    @include margin($spacer null);
+    font-size: 1.6rem;
+}
+
+.home-wrapper {
+    @include padding(null 5%);
+    margin-bottom: $spacer;
+
+    img {
+      margin-bottom: $spacer;  
+    }
+}
+
+
+@include media(350) {
+    .home-header {
+    p {
+      font-size: 1rem; 
+    }
+    }
+    .home-header-content {
+  margin: 60px 30px 0 30px;
+}
+.home-title {
+    font-size: 1.8rem;
+}
+}
+
+@include media(400) {
+     .home-header {
+    p {
+      //font-size: 1.1rem;
+      line-height: 1.6; 
+    }
+    }
+.home-header-content {
+  margin: 70px 40px 0 40px;
+}
+}
+
+@include media(600) {
+   .home-header {
+    p {
+      font-size: 1.4rem; 
+    }
+    }
+
+   .home-header-content {
+  margin: 110px 60px 0 60px;
+}
+}
+
+@include media(700) {
+    .home-header {
+
+     p {
+      font-size: 1.5rem; 
+    }
+}
+.home-header-content {
+  max-width: 570px;
+  @include margin(130px auto 0 auto);
+}
+.home-title {
+    font-size: 2.4rem;
+}
+
+.home-wrap {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 10px;
+    @include padding(0);
+
+}
+
+.home-item {
+}
+}
+
+@include media(900) {
+    .home-header {
+  
+    p {
+      font-size: 1.8rem;
+      line-height: 1.6; 
+    }
+}
+.home-header-content {
+  
+  @include margin(180px auto 0 auto);
+}
+.home-title {
+    font-size: 2.6rem;
+}
+}
+
+
+
+@include media(1300) {
+    .site-header {
+
+    p {
+      font-size: 2.2rem; 
+    }
+}
+.site-header-content {
+  
+  @include margin(240px auto 0 auto);
+}
+.home-title {
+    font-size: 3.2rem;
+}
+}
+
+@include media(1100) {
+    
+.site-header-content {
+  
+  @include margin(245px auto 0 auto);
+}
+}
+
+@include media(1900) {
+    .site-header {
+     //padding: 24vw 12vw 32vw 12vw;
+
+    p {
+      font-size: 2.8rem; 
+    }
+}
+.site-header-content {
+  max-width: 800px;
+  @include margin(340px auto 0 auto);
+}
+.home-title {
+    font-size: 3.4rem;
+}
+}

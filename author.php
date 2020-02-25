@@ -10,7 +10,7 @@
 			<?php $auth_id = get_the_author_meta('ID');
 			       $authorImage = get_the_author_meta('image', $auth_id); ?>
 
-				<header class="site-header outer" style="background-image: url(<?php echo $authorImage; ?>)">
+				<header class="admin-header outer" style="background-image: url(<?php echo $authorImage; ?>)">
 
 
 					<div id="masthead" class="active-header">
@@ -22,18 +22,16 @@
 					<?php get_template_part('templates/fullscreen-overlay'); ?>
 						<div class="inner">
 
-							<div class="site-header-content-admin">
+							<div class="admin-header-content cover">
 
 								<figure>
 									<?php
                 
-                $author_bio_avatar_size = apply_filters( 'casper_author_bio_avatar_size', 100 );
+                $author_bio_avatar_size = apply_filters( 'casper_author_bio_avatar_size', 80 );
                 echo get_avatar( get_the_author_meta( 'user_email' ), $author_bio_avatar_size ); ?>
 								</figure>
 
 								<h1><?php echo get_the_author(); ?></h1>
-
-								<h2><?php the_author_meta( 'description' ); ?></h2>
 
 								<div class="author-meta">
 
@@ -56,6 +54,8 @@
 					<div class="inner">
 
 						<div class="post-feed">
+
+							<h2><?php the_author_meta( 'description' ); ?></h2>
 
 							<?php get_template_part('templates/author-portfolio'); ?>
 

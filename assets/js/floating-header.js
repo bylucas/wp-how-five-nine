@@ -11,7 +11,7 @@ jQuery(document).ready(function ($) {
     //$body              = $('body');
     var progressBar = document.querySelector('.progress');
     var header = document.querySelector('.floating-header');
-    var title = document.querySelector('.post-header');
+    var title = document.querySelector('.post-header-content');
 
     var lastScrollY = window.scrollY;
     var lastWindowHeight = window.innerHeight;
@@ -42,12 +42,13 @@ jQuery(document).ready(function ($) {
         var trigger = title.getBoundingClientRect().top + window.scrollY;
         var triggerOffset = title.offsetHeight + 35;
         var progressMax = lastDocumentHeight - lastWindowHeight;
-        var nav = document.querySelector('.post-template .site-header');
+        var nav = document.querySelector('.post-template .post-header');
         var $body = $('body');
 
         // show/hide floating header
         if (lastScrollY >= trigger + triggerOffset) {
             header.classList.add('floating-active');
+
         } else {
             header.classList.remove('floating-active');
         }

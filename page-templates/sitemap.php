@@ -32,7 +32,7 @@ get_header(); ?>
 
 		 <div class="inner">   
 
-        <div class="page-header-content">
+        <div class="post-header-content cover">
 
               <div class="sitemap-header">
                
@@ -47,10 +47,10 @@ get_header(); ?>
  
 	<main id="site-main" class="site-main outer" role="main">
 		
-			<article class="page">
+			<article class="post">
 				
 
-							<section class="page-content">
+							<section class="post-content">
 
 									<?php
 the_content(); ?>

@@ -1,46 +1,98 @@
-// Single page
-
-.post-header-content {
-    padding: 3vw 7vw 4vw 7vw;
-
-}
-
+// Single page and default page
 
 
 .post-header {
-	//text-align: center;
-    //@include padding(null $spacer/2);
-     //background: rgba(0,0,0,0.4);
-    padding: 2vw 3vw;
-    min-width: 280px;
-    z-index: 1000;
+    position: relative;
+    color: #fff;
+    background: shade($dark-gray, 5%) no-repeat center center;
+    background-size: cover;
+    height: 50vw;
+}
 
+.post-header-content {
+    margin: 60px 40px 0 40px;
 
-h1 {
-	font-size: $font-size*1.8;
-    //font-family: $font-black;
+    h1 {
+    font-size: $font-size*1.3;
     color: $white;
     line-height: 1.2;
-	margin-top: 0;
-	margin-bottom: $spacer/1.5;
+    margin: 0;
+}
 }
 
-img {
-    float: left;
-    margin-top: 6px;
-    border: 1px solid $white;
-    border-radius: 50px;
+@include media(350) {
+    .post-header-content {
+    margin: 70px 50px 0 50px;
+
+    h1 {
+    font-size: $font-size*1.5;
 }
-    p {
-        text-align: left;
-        font-size: $third;
-        margin: 0 0 0 $spacer*1.8;
-    }
-    span {
-        float: none;
-        font-size: $third;
+}
+}
+
+@include media(400) {
+    .post-header-content {
+    margin: 85px 50px 0 50px;
+
+     h1 {
+    font-size: $font-size*1.6;
+}
+}
+}
+
+@include media(600) {
+    .post-header-content {
+    
+    @include margin(120px auto 0 auto);
+    max-width: 400px;
+     h1 {
+    font-size: $font-size*1.6;
+}
+}
+}
+
+@include media(700) {
+    .post-header-content {
+  max-width: 570px;
+  @include margin(140px auto 0 auto);
+
+  h1 {
+    font-size: $font-size*2.5;
     }
 }
+}
+
+@include media(900) {
+    .post-header-content {
+  @include margin(190px auto 0 auto);
+
+  h1 {
+    font-size: $font-size*3;
+    }
+}
+}
+
+@include media(1200) {
+    .post-header-content {
+  @include margin(290px auto 0 auto);
+
+   h1 {
+    font-size: $font-size*3.5;
+    }
+}
+}
+
+@include media(1600) {
+    .post-header-content {
+  @include margin(440px auto 0 auto);
+  max-width: 100%;
+  h1 {
+    font-size: $font-size*4;
+
+    }
+}
+}
+
 
 .post {
     position: relative;
@@ -68,11 +120,11 @@ img {
 
     img {
     float: left;
-        margin: 5px 8px 0 0;
+        margin: 5px 13px 0 0;
     }
 
     p {
-        font-size: $font-size/1.2;
+        font-size: $font-size/1.1;
         font-style: italic;
         text-align: left;
         margin-left: 9px;
@@ -84,11 +136,18 @@ img {
 }
 
 .bigger {
+    font-family: $heading-font;
+    font-size: 1.3rem !important;
+    font-style: normal !important;
     font-weight: 700;
+
+    span {
+       font-family: $font !important;
+       font-size: 1.1rem !important;
+       font-weight: 300; 
     }
- .author-job {
-        font-family: $font;
     }
+ 
 
 .post-meta-wrap {
     display: flex;
@@ -98,6 +157,7 @@ img {
     padding-top: $spacer/4;
 	p {
         display: block;
+        font-family: $heading-font;
     font-size: $font-size/1.2;
    margin-bottom: $spacer/3;
    color: $postcard-meta;
@@ -127,47 +187,26 @@ img {
     }
 }
 
-.hash {
-    // font-size: $font-size/1.2;
-    // font-weight: 700;
-    // margin-right: 2px;
-}
 
 @include media(600) {
-    .post-header {
-    min-width: 400px;
-     h1 {
-    font-size: $font-size*2.2;
-    }
-}
 
 .author-bio {
     padding-bottom: $spacer/1.5;
 
     img {
-        margin: 0 8px 0 0;
+        margin: 0 13px 0 0;
     }
 
     p {
-     font-size: $font-size/1.1;
-     line-height: 1.4; 
+     line-height: 1.5; 
     }
 }
 }
 
 @include media(700) {
 
-     .post-header-content {
-    padding: 6vw 7vw 12vw 7vw;
-
-}
-    .post-header {
-   min-width: 600px;
-    
-     h1 {
-    font-size: $font-size*2.5;
-    margin-bottom: $spacer;
-    }
+.post-content {
+    @include padding(1.5rem 7% null 7%);
 }
 
 .post-meta {
@@ -176,38 +215,30 @@ img {
 
 .author-bio {
  img {
-        margin: 4px 8px 0 0;
+        margin: 4px 13px 0 0;
     }
 p {
-     font-size: $font-size*1.1;
+     font-size: $font-size;
 }
 }
 }
 
 @include media(900) {
-    .post-header-content {
-    padding: 8vw 7vw 18vw 7vw;
-
-}
+    
     .post-content,
     .post-meta {
-    @include padding(null $spacer*2);
     max-width: 920px;
     @include margin(null auto);
 }
 
-.post-header {
-min-width: 800px;
-    h1 {
-    font-size: $font-size*3;
-    margin-bottom: $spacer*1.2;
-    }
+.post-meta {
+@include padding(null $spacer*2);
 }
 
-
 .post-content {
-    padding: 50px 100px 0;
+    padding: 70px 100px 0;
     margin-top: -140px;
+    background: rgba(255,255,255,0.97);
 }
 
 .post-content:before {
@@ -237,6 +268,6 @@ min-width: 800px;
     transform: rotate(5deg);
 }
 .author-bio img {
-        margin: 3px 8px 0 0;
+        margin: 3px 13px 0 0;
 }
 }

@@ -92,11 +92,13 @@ a {
 @import "site/contact";
 @import "site/prism-code";
 
+@import "pages/home";
 @import "pages/single";
 @import "pages/index";
 @import "pages/none";
-@import "pages/page";
+//@import "pages/page";
 @import "pages/author";
+@import "site/post-feed";
 
 
 // ==============================================

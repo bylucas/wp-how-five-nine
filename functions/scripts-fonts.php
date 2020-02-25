@@ -24,12 +24,6 @@ function phone1st_custom_jquery() {
 
 add_action('wp_enqueue_scripts', 'phone1st_custom_jquery');
 
-add_action( 'wp_print_styles', 'wps_deregister_styles', 100 );
-function wps_deregister_styles() {
-    //wp_dequeue_style( 'wp-block-library' );
-    //wp_dequeue_style( 'wp-block-library-theme' );
-}
-
 /**
  * Enqueue scripts and styles.
  */
@@ -42,7 +36,7 @@ function phone1st_scripts() {
     }
 
     // adding vue.js
-wp_enqueue_script('phone1st-vue-js', 'https://unpkg.com/vue', array(), '', true);
+wp_enqueue_script('phone1st-vue-js', 'https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js', array(), '', true);
 
     wp_enqueue_script( 'phone1st-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/min/skip-link-focus-fix-min.js', array(), '20151215', true );
 wp_enqueue_script('phone1st-sweetalert', 'https://unpkg.com/sweetalert/dist/sweetalert.min.js', array(), '', true);
@@ -114,7 +108,6 @@ function add_vuetemplates() { ?>
 
                 <input class="subscribe" type="email" id="email" v-model="newUser.email" placeholder="youremail@example.com" />
 
-                <textarea type="text" class="subscribe" id="message" v-model="newUser.message" placeholder="if you'd like to leave a quick message" rows="3"></textarea>
             </div>
             <button v-on:click="submitForm" type="button">Subscribe</button>
             <p>Or if you prefer you can contact me via the <em>regular email route</em> at <a href="mailto:h@bylucas.co.uk?Subject=Enquiry%20from%20the%20bylucas-website">h@bylucas.co.uk</a></p>

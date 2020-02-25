@@ -1,9 +1,8 @@
-.post-content,
-.page-content {
+.post-content {
 
  position: relative;
     background: $white;
-    @include padding($spacer/2 $spacer/2 $spacer/2 $spacer/2);
+    @include padding($spacer/2 5%);
     min-height: 350px;
 
 @import "typography";

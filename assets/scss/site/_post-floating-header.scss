@@ -37,11 +37,13 @@
 }
 .floating-header-logo a {
 	opacity: .8;
+	font-size: .8rem;
 }
 
 .floating-header-title,
 	.floating-header-divider {
 		visibility: hidden;
+		width: 1px;
 }
 
 .floating-header-share-label {
@@ -152,6 +154,7 @@
 	.floating-header-title,
 	.floating-header-divider {
 		visibility: visible;
+		width: auto;
 }
 	.floating-header-divider {
 	margin: 0 5px;

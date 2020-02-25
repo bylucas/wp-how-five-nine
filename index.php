@@ -28,9 +28,7 @@ get_header(); ?>
      
      <div class="inner">   
 
-        <div class="site-header-content">
-
-               <span><?php get_template_part('assets/icons/site-logo'); ?></span>
+        <div class="site-header-content cover">
                
                     <h1 class="site-title"><?php bloginfo( 'name' ); ?></a></h1>
             
@@ -63,7 +61,7 @@ get_header(); ?>
 
 	endif; ?>
 	</div><!-- inner -->
-	<?php get_template_part('templates/subscribe'); ?>
+
 	</main><!-- #primary -->
 
 <?php

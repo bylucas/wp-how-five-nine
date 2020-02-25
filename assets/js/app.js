@@ -190,7 +190,7 @@ var emailRE = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@(
 // Reference messages collection
 const db = firebase.firestore();
 
-var usersRef = db.collection('users');
+var usersRef = db.collection('india');
 
 
 Vue.component('contact', {
@@ -200,8 +200,7 @@ Vue.component('contact', {
 		return {
 			newUser: {
 				name: '',
-				email: '',
-				message: ''
+				email: ''
 			}
 		};
 	},
@@ -231,7 +230,6 @@ Vue.component('contact', {
 			if (this.success) {
 				this.newUser.name = ''
 				this.newUser.email = ''
-				this.newUser.message = ''
 			}
 		},
 
@@ -247,8 +245,7 @@ Vue.component('contact', {
 		},
 		resetData: function () {
 			this.newUser.name = '';
-			this.newUser.email = '';
-			this.newUser.messsage = ''
+			this.newUser.email = ''
 		}
 	}
 })

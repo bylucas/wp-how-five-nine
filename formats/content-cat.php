@@ -20,7 +20,7 @@
         
         the_title( '<h2 class="post-card-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
         ?>
-					
+					<p><?php echo phone1st_excerpt(); ?></p>
 					<footer class="post-card-meta">
 
 		<p><?php the_modified_date('j F Y'); ?> | by <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author"><?php echo get_the_author(); ?></a><?php phone1st_comment_count(); ?></p>

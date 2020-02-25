@@ -13,11 +13,11 @@ get_header(); ?>
  <?php if ( has_post_thumbnail() ) {
         $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), false, '' ); ?>
 
-	<header class="site-header" style="background-image: url(<?php echo esc_url( $src[0] ); ?>)">
+	<header class="post-header" style="background-image: url(<?php echo esc_url( $src[0] ); ?>)">
 
 	<?php } else { ?>
 
-  <header class="site-header" style="background-image: url(<?php echo get_header_image(); ?>)">
+  <header class="post-header" style="background-image: url(<?php echo get_header_image(); ?>)">
             <?php } ?>
 
 
@@ -32,13 +32,11 @@ get_header(); ?>
 
 		 <div class="inner">   
 
-        <div class="page-header-content">
+        <div class="post-header-content cover">
 
-              <div class="post-header">
+   
                
                     <?php the_title( '<h1>', '</h1>' ); ?>
-       
-              </div>
             
         </div>
        

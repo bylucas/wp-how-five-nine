@@ -7,7 +7,7 @@
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="site-header outer" style="background-image: url(<?php echo casper_tax_pic_url(); ?>)">
+			<header class="cat-header outer" style="background-image: url(<?php echo casper_tax_pic_url(); ?>)">
 
 
 				<div id="masthead" class="active-header">
@@ -20,8 +20,8 @@
 				<!-- active-header -->
 				<?php get_template_part('templates/fullscreen-overlay'); ?>
 					<div class="inner">
-						<div class="page-header-content">
-							<div class="page-header">
+						<div class="cat-header-content cover">
+							
 							<h1>
                 <?php single_cat_title( '', true ); ?>
                </h1>
@@ -30,7 +30,7 @@
 								<?php echo category_description(); ?>
 
 								<?php endif; ?>
-						</div>
+						
 
 					</div>
 				</div>

@@ -7,6 +7,9 @@
 	<div class="social-wrap">
 		<div id="social-navigation" class="social-links">
 
+			<a class="social-link social-link-fb" href="https://www.facebook.com/Phone1st-Developer-Theme-for-html-106336650945029/" target="_blank" rel="noopener">
+				<?php get_template_part('assets/icons/facebook2'); ?>
+			</a>
 
 			<a class="social-link social-link-fb" href="https://www.linkedin.com/in/bylucas/" target="_blank" rel="noopener">
 				<?php get_template_part('assets/icons/linkedin'); ?>

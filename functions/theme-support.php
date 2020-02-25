@@ -15,7 +15,7 @@ THEME SUPPORT
 // hard-coded <title> tag in the document head, and expect WordPress to
 // provide it for us.
 // Using the built-in seo title
-	//add_theme_support( 'title-tag' );
+	add_theme_support( 'title-tag' );
 
 // Allow editor style.
   	add_editor_style( 'assets/css/editor-style.css' );
@@ -210,7 +210,7 @@ function phone1st_excerpt_more( $more ) {
 }
 
 function phone1st_excerpt_length($length) {
-  return 15;
+  return 30;
 }
 
 function phone1st_global_excerpt($output) {

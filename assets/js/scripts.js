@@ -15,7 +15,6 @@ $searchFormInput   = $('#searchform #s'),
  timer             = 800;
 
 $(window).scroll(function(event){
-           
             if(timer) {
                 window.clearTimeout(timer);
             }
@@ -25,19 +24,29 @@ $(window).scroll(function(event){
               if (st > lastScrollTop){
                 // Scroll down
                 if (st >= 10) {
-                  $mainHeader.removeClass('active-header dark');
+                  $mainHeader.removeClass('active-header');
+                  $mainHeader.removeClass('not-dark');
+
+
+
                 }
               } else {
                 // Scroll up
                 if (st <= 200) {
-                  $mainHeader.removeClass('dark').addClass('active-header');
+                  $mainHeader.addClass('active-header');
+                  $mainHeader.addClass('not-dark');
+                  $mainHeader.removeClass('dark');
+
+
                 } else {
-                  $mainHeader.addClass('active-header dark');
+                  $mainHeader.addClass('active-header');
+                  $mainHeader.addClass('dark');
                 }
               }
               lastScrollTop = st;
             }, 20);
           });
+
 
 ////////////////////////////////////////////////
 
@@ -180,15 +189,39 @@ $offcanvasToggle.click( function(e) {
   }
   initNavMenu($('.nav-menu'));
 
-//////////////////////////////////////////////////////
-//Paralax on posts
+/* ==============
+   Parallax cover
+   ============== */
+var html = $('html');
+var viewport = $(window);
+  var cover = $('.cover');
+  var coverPosition = 0;
 
-// $('.parallax').each(function(index) {
-//       var imageSrc = $(this).data('image-src')
-//       var imageHeight = $(this).data('height')
-//       $(this).css('background-image','url(' + imageSrc + ')')
-//       $(this).css('height', imageHeight)
-//   })
+  function prlx() {
+    if (cover.length >= 1) {
+      var windowPosition = viewport.scrollTop();
+      (windowPosition > 0) ? coverPosition = Math.floor(windowPosition * 0.25): coverPosition = 0;
+      cover.css({
+        '-webkit-transform': 'translate3d(0, ' + coverPosition + 'px, 0)',
+        'transform': 'translate3d(0, ' + coverPosition + 'px, 0)'
+      });
+      (viewport.scrollTop() < cover.height()) ? html.addClass('cover-active'): html.removeClass('cover-active');
+    }
+  }
+  prlx();
+
+  viewport.on({
+    'scroll': function() {
+      prlx();
+    },
+    'resize': function() {
+      prlx();
+    },
+    'orientationchange': function() {
+      prlx();
+    }
+  });
+
 
 
 
